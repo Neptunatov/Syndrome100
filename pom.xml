@@ -20,6 +20,12 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -59,11 +65,14 @@
                         <configuration>
                             <rules>
                                 <rule>
+                                    <excludes>
+                                        <exclude>*Main</exclude>
+                                    </excludes>
                                     <limits>
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>1.00</minimum>
+                                            <minimum>1</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
